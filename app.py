@@ -34,33 +34,31 @@ def runApp():
 
 
 def delApp():
-    apps = []
-    if os.path.isfile("save.txt"):
-        with open("save.txt", "w") as fileRef:
-            fileRef.write("")
+    apps.clear()
     updateList()
 
 
 root = tk.Tk()
+root.title("Ease Application")
 
-canvas = tk.Canvas(root, height="600", width="600", bg="#000")
+canvas = tk.Canvas(root, height="600", width="600", bg="#74C4AE")
 canvas.pack()
 
 frame = tk.Frame(root, bg="white")
-frame.place(relwidth="0.8", relheight="0.8", relx="0.1", rely="0.1")
+frame.place(relwidth="0.8", relheight="0.7", relx="0.1", rely="0.1")
 
 updateList()
 
 openFile = tk.Button(root, text="Open File", padx=10, pady=5,
-                     fg="white", bg="red", command=addApp)
+                     fg="white", bg="blue", command=addApp)
 openFile.pack()
 
 runApps = tk.Button(root, text="Run Apps", padx=10,
-                    pady=5, fg="white", bg="lightblue", command=runApp)
+                    pady=5, fg="white", bg="blue", command=runApp)
 runApps.pack()
 
 delApps = tk.Button(root, text="Clear saved list", padx=10,
-                    pady=5, fg="white", bg="lightblue", command=delApp)
+                    pady=5, fg="white", bg="red", command=delApp)
 delApps.pack()
 
 root.mainloop()
