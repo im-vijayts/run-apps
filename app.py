@@ -50,16 +50,16 @@ frame.place(relwidth="0.8", relheight="0.7", relx="0.1", rely="0.1")
 updateList()
 
 openFile = tk.Button(root, text="Open File", padx=10, pady=5,
-                     fg="white", bg="blue", command=addApp)
-openFile.pack()
+                     fg="white", bg="#3381ff", command=addApp)
+openFile.pack(fill=tk.X)
 
 runApps = tk.Button(root, text="Run Apps", padx=10,
-                    pady=5, fg="white", bg="blue", command=runApp)
-runApps.pack()
+                    pady=5, fg="white", bg="#3381ff", command=runApp)
+runApps.pack(fill=tk.X)
 
 delApps = tk.Button(root, text="Clear saved list", padx=10,
                     pady=5, fg="white", bg="red", command=delApp)
-delApps.pack()
+delApps.pack(fill=tk.X)
 
 root.mainloop()
 
