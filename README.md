@@ -1,4 +1,4 @@
-# run-apps
+# AUTO APP RUNNER
 This is a GUI using Tkinter module of Python language. 
 
 It is used to store the applications which the user wants to open and enables the user to launch those applications using the single click of a button.
